@@ -15,7 +15,7 @@ export default defineConfig({
 		mdx(),
 		image(),
 	],
-	output: 'server',
+	// output: 'server',
 	adapter: vercel({
 		analytics: true,
 	}),
