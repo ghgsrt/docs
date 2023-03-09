@@ -3,14 +3,20 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel/serverless';
 
-import image from "@astrojs/image";
+import image from '@astrojs/image';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://docs.alexbos.co',
-  integrations: [sitemap(), mdx(), image()],
-  output: 'server',
-  adapter: vercel({
-    analytics: true
-  })
+	site: 'https://docs.alexbos.co/',
+	integrations: [
+		sitemap({
+			customPages: ['https://docs.alexbos.co/blog'],
+		}),
+		mdx(),
+		image(),
+	],
+	output: 'server',
+	adapter: vercel({
+		analytics: true,
+	}),
 });
