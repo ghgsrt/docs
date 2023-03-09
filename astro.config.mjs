@@ -8,13 +8,7 @@ import image from '@astrojs/image';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://docs.alexbos.co/',
-	integrations: [
-		sitemap({
-			// customPages: ['https://docs.alexbos.co/blog'],
-		}),
-		mdx(),
-		image(),
-	],
+	integrations: [sitemap(), mdx(), image()],
 	output: 'server',
 	adapter: vercel({
 		analytics: true,
