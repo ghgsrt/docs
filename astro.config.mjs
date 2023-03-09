@@ -10,12 +10,12 @@ export default defineConfig({
 	site: 'https://docs.alexbos.co/',
 	integrations: [
 		sitemap({
-			customPages: ['https://docs.alexbos.co/blog'],
+			// customPages: ['https://docs.alexbos.co/blog'],
 		}),
 		mdx(),
 		image(),
 	],
-	// output: 'server',
+	output: 'server',
 	adapter: vercel({
 		analytics: true,
 	}),
